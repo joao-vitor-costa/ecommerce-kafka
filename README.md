@@ -48,4 +48,19 @@ Create Consumer:
 ```sh
  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic ECOMMERCE_NEW_ORDER --from-beginning
  ```
+
+ 
+Parallelizing using partitions. The partitions that define how many consumers are running:
+```sh
+bin/kafka-topics.sh --alter --zookeeper localhost:2181 --topic ECOMMERCE_NEW_ORDER --partitions 3
+ ```
+
+
+
+Analyze consumption groups:
+```sh
+bin/kafka-consumer-groups.sh  --all-groups --bootstrap-server localhost:9092 --describe
+```
+
+
   
