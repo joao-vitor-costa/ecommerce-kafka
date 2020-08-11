@@ -1,5 +1,6 @@
-package com.joao;
+package com.joao.produce;
 
+import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -13,13 +14,17 @@ public class NewOrderMain {
         var producer = new KafkaProducer<String, String>(properties());
         var value = "123,45546,7825654469";
         var record = new ProducerRecord<>("ECOMMERCE_NEW_ORDER",value,value);
-        producer.send(record,(data,ex)->{
+        Callback callback = (data,ex)->{
             if(ex != null){
                 ex.printStackTrace();
                 return;
             }
             System.out.println("Success envied " + data.topic() + ":::partition " + data.partition() + "/ offset "  + data.offset() + "/ timestamp" + data.timestamp());
-        }).get();
+        };
+        var email = "Thank you for order! We are processing your order!";
+        var emailRecord = new ProducerRecord<>("ECOMMERCE_SEND_EMAIL", email,email);
+        producer.send(record, callback).get();
+        producer.send(emailRecord, callback).get();
     }
 
     private static Properties properties() {
