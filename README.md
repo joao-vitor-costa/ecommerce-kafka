@@ -32,9 +32,12 @@ Create Producer:
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic LOJA_NOVO_PEDIDO
 ```
 ```sh
-  * pedido0,550
+  * pedido0,55
+  
   * pedido1,3434
+  
   * pedido2,3453
+  
 ```
   
   
