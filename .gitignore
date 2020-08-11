@@ -217,4 +217,6 @@ hs_err_pid*
 *tmpfiles
 *lol
 
+*/target/*
+
 # End of https://www.toptal.com/developers/gitignore/api/java,code-java,intellij,test
