@@ -72,12 +72,12 @@ mkdir data/kafka
 vi config/server.properties
 
 Replace the path log.dirs=/temp/Kafka 
-with path log.dirs=/c/apps/data/kafka
+with path log.dirs=/Users/JoaoVitor/Documents/apps/data/kafka
 
 vi config/zookeeper.properties
 
 Replace the path log.dirs=/temp/zookeeper 
-with path dataDir=/c/apps/data/zookeeper
+with path dataDir=/Users/JoaoVitor/Documents/apps/data/zookeeper
 ```
 
 
