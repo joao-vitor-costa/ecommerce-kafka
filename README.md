@@ -63,7 +63,7 @@ bin/kafka-consumer-groups.sh  --all-groups --bootstrap-server localhost:9092 --d
 ```
 
 
-Create directory out of time, in the root folder of Kafka:
+Create directory out of time, in the root folder of apps:
 ```sh
 mkdir data
 mkdir data/zookeeper
