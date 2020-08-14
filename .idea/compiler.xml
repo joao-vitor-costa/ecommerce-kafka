@@ -7,10 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service-log" />
-        <module name="services-users" />
+        <module name="service-httpecommerce" />
         <module name="common-kafka" />
-        <module name="service-fraud-detector" />
         <module name="service-new-order" />
+        <module name="services-users" />
+        <module name="service-fraud-detector" />
         <module name="service-email" />
       </profile>
     </annotationProcessing>
