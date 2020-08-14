@@ -1,4 +1,4 @@
-package com.joao.consumer;
+package com.joao.service;
 
 
 import com.joao.dto.Order;

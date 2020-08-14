@@ -1,4 +1,4 @@
-package com.joao.consumer;
+package com.joao.service;
 
 import com.joao.dto.Email;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

@@ -1,4 +1,4 @@
-package com.joao.consumer;
+package com.joao.service;
 
 import com.joao.interfaces.ConsumerFunction;
 import com.joao.util.GsonDeserializer;
@@ -44,13 +44,12 @@ public class KafkaService<T> implements Closeable {
 			var records = this.consumer.poll(Duration.ofMillis(100));
 			if (!records.isEmpty()) {
 				System.out.println("Found " + records.count() + " records");
-				for(var record : records){
+				for (var record : records) {
 					try {
 						parse.consume(record);
-					} catch (ExecutionException e) {
-						// so far, just logging the exception, for this message
-						e.printStackTrace();
-					} catch (InterruptedException e) {
+					} catch (Exception e) {
+						// only catches Exception because no matter which Exception
+						// is want to recover and parse the next record one
 						// so far, just logging the exception, for this message
 						e.printStackTrace();
 					}

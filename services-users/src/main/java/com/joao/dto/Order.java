@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 public class Order {
 	private final String userId, orderId;
 	private final BigDecimal amount;
-	private final String email;
+	private String email;
 	
 	public Order(String userId, String orderId, BigDecimal amount, String email) {
 		this.userId = userId;
@@ -22,5 +22,13 @@ public class Order {
 				", orderId='" + orderId + '\'' +
 				", amount=" + amount +
 				'}';
+	}
+	
+	public String getUserId() {
+		return userId;
+	}
+	
+	public String getEmail() {
+		return email;
 	}
 }
