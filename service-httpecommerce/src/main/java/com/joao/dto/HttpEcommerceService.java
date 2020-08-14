@@ -13,6 +13,8 @@ public class HttpEcommerceService {
 		context.setContextPath("/");
 		context.addServlet(new ServletHolder(new NewOrderServelet()), "/new");
 		
+		server.setHandler(context);
+		
 		server.start();
 		server.join();
 		
