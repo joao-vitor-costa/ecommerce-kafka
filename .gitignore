@@ -218,4 +218,6 @@ hs_err_pid*
 *lol
 *target
 
+*target/users_database.db
+
 # End of https://www.toptal.com/developers/gitignore/api/java,code-java,intellij,test
